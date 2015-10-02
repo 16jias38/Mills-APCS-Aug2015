@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class AsciiArt here.
+ * Prints out a word tree. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Sammy Jia
+ * Version 1.0 10/2/15
  */
 public class AsciiArt
 {
@@ -12,6 +12,7 @@ public class AsciiArt
      printTreeTop();
      printTreeTrunk();
     }
+    //Prints the treetop.
     public static void printTreeTop()
     {
         treeLeaves(1, 3, 58);
@@ -26,6 +27,7 @@ public class AsciiArt
         treeLeaves(2, 26, 0);
         treeLeaves(2, 24, 6);
     }
+    //Prints the tree trunk and branches.
     public static void printTreeTrunk()
     {
         System.out.println("                              wo             woodwoodwoodwood                      d");
@@ -42,11 +44,12 @@ public class AsciiArt
         mainTreeTrunk(3, 46);
         mainTreeTrunk(4, 46);
     }
+    //Prints the leaves of the treetop.
     public static void treeLeaves(int height, int width, int spaces)
     {
         for (int i=1; i<=height; i++)
         {
-             for (int k=1; k<=spaces; k++)
+            for (int k=1; k<=spaces; k++)
             {
                 System.out.print(" ");
             }
@@ -55,15 +58,15 @@ public class AsciiArt
             {
                 System.out.print("leaf");
             }
-            System.out.print("|");
-            System.out.println();
+            System.out.println("|");
         }
     }
+    //Prints the actual trunk of the tree.
     public static void mainTreeTrunk(int width, int spaces)
     {
         for (int i=1; i<=1; i++)
         {
-             for (int k=1; k<=spaces; k++)
+            for (int k=1; k<=spaces; k++)
             {
                 System.out.print(" ");
             }
@@ -74,4 +77,5 @@ public class AsciiArt
             System.out.println();
         }
     }
-}
+    }
+
