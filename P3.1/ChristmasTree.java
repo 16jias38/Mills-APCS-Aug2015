@@ -13,13 +13,13 @@ public class ChristmasTree
        tree(2, 5);
     }
     //Prints tree. 1st int gives number of segments and 2nd int gives height of segment.
-    public static void tree(int segment, int height)
+    public static void tree(int treeTopSegments, int heightOfSegment)
     {
         //Prints treetops. widthMod is used later on to modify the width limit of the lines.
-        for (int widthMod=0; widthMod<segment; widthMod++)
+        for (int widthMod=0; widthMod<treeTopSegments; widthMod++)
         {
             //widthLimit helps set the width limit of a line
-            for (int widthLimit=1; widthLimit<=height; widthLimit++)
+            for (int widthLimit=1; widthLimit<=heightOfSegment; widthLimit++)
             {
                 //Prints spaces for tree
                 for (int spaces=1; spaces<=6-(widthLimit+widthMod); spaces++)
