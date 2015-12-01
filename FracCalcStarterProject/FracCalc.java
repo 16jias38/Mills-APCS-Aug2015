@@ -1,8 +1,8 @@
  /**
- * Checkpoint two of the FracCalc project. Takes a fraction equation and outputs the second operand's components.
+ * Checkpoint three of the FracCalc project. Takes a fraction equation and outputs the answer.
  * 
  * Sammy Jia
- * Version 2.0 11/24/15
+ * Version 3.0 12/1/15
  */
 import java.util.*;
 public class FracCalc {
