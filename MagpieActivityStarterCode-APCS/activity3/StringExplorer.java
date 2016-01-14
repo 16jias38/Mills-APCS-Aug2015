@@ -1,3 +1,5 @@
+package activity3;
+
 /**
  * A program to allow students to try out different 
  * String methods. 
@@ -21,6 +23,12 @@ public class StringExplorer
 		System.out.println ("After toLowerCase(), sample = " + sample);
 		
 		//  Try other methods here:
+		int notFoundPsn = sample.indexOf("slow");
+		System.out.println ("sample.indexOf(\"slow\") = " + notFoundPsn);
+		int firstIndexOf = sample.indexOf("h");
+		System.out.println ("sample.indexOf(\"h\") = " + firstIndexOf);
+		int secondIndexOf = sample.indexOf("h", 2);
+		System.out.println ("sample.indexOf(\"h\", 2) = " + secondIndexOf);
 
 	}
 
