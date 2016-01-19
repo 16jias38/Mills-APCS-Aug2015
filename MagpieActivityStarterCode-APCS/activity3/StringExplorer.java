@@ -3,8 +3,8 @@ package activity3;
 /**
  * A program to allow students to try out different 
  * String methods. 
- * @author Laurie White
- * @version April 2012
+ * @author Laurie White; Edited by Sammy Jia
+ * @version April 2012; Revised 1/14/16
  */
 public class StringExplorer
 {

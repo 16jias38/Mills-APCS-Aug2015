@@ -33,13 +33,17 @@ public class Magpie2
     public String getResponse(String statement)
     {
         String response = "";
-        if (statement.trim().length()==0)
+        if (statement.trim().length() == 0)
         {
             response = "Please, say something.";
         }
         else if (statement.indexOf("no") >= 0)
         {
             response = "Why so negative?";
+        }
+        else if (statement.indexOf("Canada") >= 0)
+        {
+            response = "I've heard that Canada has a lot of forests.";
         }
         else if (statement.indexOf("mother") >= 0
                 || statement.indexOf("father") >= 0
@@ -57,6 +61,14 @@ public class Magpie2
                 || statement.indexOf("cat") >= 0)
         {
             response = "Tell me more about your pets.";
+        }
+        else if (statement.indexOf("candy") >= 0)
+        {
+            response = "Candy is unhealthy.";
+        }
+        else if (statement.indexOf("book") >= 0)
+        {
+            response = "Reading books is a good way to pass time.";
         }
         else
         {
