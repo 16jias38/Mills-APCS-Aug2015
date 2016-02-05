@@ -61,9 +61,9 @@ public class IntArrayWorker
   public int getColTotal(int col)
   {
     int colTotal=0;
-    for (int row = 0; row < matrix[col].length; row++)
+    for (int row = 0; row < matrix.length; row++)
     {
-      colTotal++;
+      colTotal+=matrix[row][col];
     }
     return colTotal;
   }

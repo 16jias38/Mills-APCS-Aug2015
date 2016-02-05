@@ -126,7 +126,6 @@ public class Picture extends SimplePicture
     Pixel rightPixel = null;
     int count = 0;
     Pixel[][] pixels = this.getPixels2D();
-    
     // loop through the rows
     for (int row = 27; row < 97; row++)
     {
