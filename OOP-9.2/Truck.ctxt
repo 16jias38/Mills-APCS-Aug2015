@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Truck()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Truck\r\n
+comment1.params=color\ currentMileage\ truckLengthFeet\ wheelDiameterInches
+comment1.target=Truck(java.lang.String,\ int,\ int,\ int)
+comment2.params=truckLengthFeet
+comment2.target=void\ setTruckLengthFeet(int)
+comment3.params=wheelDiameterInches
+comment3.target=void\ setWheelDiameterInches(int)
+comment4.params=
+comment4.target=void\ printTruckLengthFeet()
+comment5.params=
+comment5.target=void\ printWheelDiameterInches()
+comment6.params=
+comment6.target=void\ changeOil()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

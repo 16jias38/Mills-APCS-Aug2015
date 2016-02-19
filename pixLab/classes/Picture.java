@@ -118,6 +118,41 @@ public class Picture extends SimplePicture
     } 
   }
   
+  public void mirrorVerticalRightToLeft()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      for (int col = 0; col < width / 2; col++)
+      {
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row][width - 1 - col];
+        leftPixel.setColor(rightPixel.getColor());
+      }
+    } 
+  }
+  
+  public void mirrorDiagonal()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel origPixel = null;
+    Pixel reflectedPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      int col=0;
+      while (col!=row)
+      {
+        origPixel = pixels[row][col];
+        reflectedPixel = pixels[col][row];
+        reflectedPixel.setColor(origPixel.getColor());
+        col++;
+      }
+    } 
+  }
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
@@ -127,7 +162,7 @@ public class Picture extends SimplePicture
     int count = 0;
     Pixel[][] pixels = this.getPixels2D();
     // loop through the rows
-    for (int row = 27; row < 97; row++)
+    for (int row = 150; row < 340; row++)
     {
       // loop from 13 to just before the mirror point
       for (int col = 13; col < mirrorPoint; col++)
@@ -216,16 +251,64 @@ public class Picture extends SimplePicture
     }
   }
   
+  public void grayscale(){
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    int total=0;
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        total=pixelObj.getBlue()+pixelObj.getRed()+pixelObj.getGreen();
+        pixelObj.setBlue(total/3);
+        pixelObj.setRed(total/3);
+        pixelObj.setGreen(total/3);
+      }
+    }
+  }
+    }
   
+  public void negate(){
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setBlue(255-pixelObj.getBlue());
+        pixelObj.setRed(255-pixelObj.getRed());
+        pixelObj.setGreen(255-pixelObj.getGreen());
+      }
+    }
+  }
+    }
+    
+  public void fixUnderwater(){
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setBlue(50+pixelObj.getBlue());
+        pixelObj.setRed(pixelObj.getRed()/4);
+        pixelObj.setGreen(50+pixelObj.getGreen());
+        
+      }
+    }
+    }
+  }
+    
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("water.jpg");
     beach.explore();
-    beach.zeroBlue();
+    beach.fixUnderwater();
     beach.explore();
+    beach.write("enhanceFish.jpg");
   }
   
 } // this } is the end of class Picture, put all new methods before this

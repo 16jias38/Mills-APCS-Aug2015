@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=carCarrier()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ carCarrier\r\n
+comment1.params=color\ currentMileage\ truckLengthFeet\ wheelDiameterInches\ maxWeightLoadLb
+comment1.target=carCarrier(java.lang.String,\ int,\ int,\ int,\ int)
+comment2.params=maxWeightLoadLb
+comment2.target=void\ setMaxWeightLoadLb(int)
+comment3.params=
+comment3.target=int\ getMaxWeightLoadLb()
+numComments=4
