@@ -8,6 +8,12 @@ public class CardTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		Card a=new Card("king", "diamonds", 10);
+		Card b=new Card("ace", "spades", 20);
+		Card c=new Card("four", "hearts", 1);
+		System.out.println(a.suit()+" "+a.rank()+" "+a.pointValue());
+		System.out.println(b.suit()+" "+b.rank()+" "+b.pointValue());
+		System.out.println(c.suit()+" "+c.rank()+" "+c.pointValue());
+		System.out.println(
 	}
 }
