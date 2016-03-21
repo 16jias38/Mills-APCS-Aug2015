@@ -11,7 +11,7 @@ public class Deck {
     /**
      * cards contains all the cards in the deck.
      */
-    private List<Card> cards;
+    private List<Card> cards=new ArrayList<Card>();
 
     /**
      * size is the number of not-yet-dealt cards.
@@ -30,21 +30,21 @@ public class Deck {
      * @param values is an array containing all of the card point values.
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
-        int max=ranks.length;
-        int i=0;
-        while (i<max){
-            cards.add(new Card(ranks[i],suits[i], values[i]));
-            i++;
-        }
+         for (int j=0; j<suits.length; j++){
+              for (int k=0; k<values.length; k++){
+                   cards.add(new Card(ranks[k], suits[j], values[k]));
+              }
+         }
+         shuffle();
     }
 
 
-    /**
+   /**
      * Determines if this deck is empty (no undealt cards).
      * @return true if this deck is empty, false otherwise.
      */
     public boolean isEmpty() {
-        return cards.size()!=0;
+        return cards.size()==0;
     }
 
     /**
@@ -63,7 +63,7 @@ public class Deck {
         int counter=0;
         Card currentCard=cards.get(0);
         while (counter<cards.size()){
-            int placeholder=(int)(Math.random()*100);
+            int placeholder=(int)(Math.random()*cards.size());
             cards.set(placeholder, currentCard);
             currentCard=cards.get(placeholder);
             counter++;
@@ -76,7 +76,10 @@ public class Deck {
      *         previously dealt.
      */
     public Card deal() {
-        return;
+        ArrayList<Card> placeholder=new ArrayList<Card>();
+        placeholder.add(cards.get(0));
+        cards.remove(0);
+        return placeholder.get(0);
     }
 
     /**
