@@ -35,6 +35,7 @@ public class Deck {
                    cards.add(new Card(ranks[k], suits[j], values[k]));
               }
          }
+         size=cards.size();
          shuffle();
     }
 
@@ -44,7 +45,7 @@ public class Deck {
      * @return true if this deck is empty, false otherwise.
      */
     public boolean isEmpty() {
-        return cards.size()==0;
+        return size==0;
     }
 
     /**
@@ -52,7 +53,7 @@ public class Deck {
      * @return the number of undealt cards in this deck.
      */
     public int size() {
-        return cards.size();
+        return size;
     }
 
     /**
@@ -76,10 +77,12 @@ public class Deck {
      *         previously dealt.
      */
     public Card deal() {
-        ArrayList<Card> placeholder=new ArrayList<Card>();
-        placeholder.add(cards.get(0));
-        cards.remove(0);
-        return placeholder.get(0);
+        if (isEmpty()) {
+			return null;
+		}
+		size--;
+		Card c = cards.get(size);
+		return c;
     }
 
     /**
