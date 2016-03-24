@@ -77,11 +77,11 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		if (isEmpty()) {
+		if (isEmpty()){
 			return null;
 		}
 		size--;
-		Card c = cards.get(size);
+		Card c=cards.get(size);
 		return c;
 	}
 
