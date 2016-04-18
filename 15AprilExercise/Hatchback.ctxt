@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=color\ year\ make\ numDoors
+comment0.target=Hatchback(java.lang.String,\ int,\ java.lang.String,\ int)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=int\ getNumDoors()
+numComments=3
